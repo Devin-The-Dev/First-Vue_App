@@ -5,13 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
     <title>First Vue.js App</title>
 </head>
 
 <body>
+    <div class="nav-bar"></div>
+
     <div id="app">
-        <h1>{{ product }}</h1>
-        <h2>{{ description }}</h2>
+        <div class="product">
+            <div class="product-img">
+                <img v-bind:src="image" alt="socks">
+                <!-- shorthand for v-bind is just colon (:src) -->
+            </div>
+            <div class="product-info">
+                <h1>{{ product }}</h1>
+                <h2>{{ description }}</h2>
+                <a v-bind:href="link">{{ anchorWord }}</a>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
